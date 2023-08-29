@@ -18,11 +18,11 @@ Contact Creation
     ${phone}=                         SetVariable              +${rand_phone}
     TypeText                          Phone                    ${phone}                    First Name
     Picklist                          Salutation               Mr.
-    TypeText                          First Name               tara26
+    TypeText                          First Name               tara27
     TypeText                          Last Name                chandika
     ComboBox                          Search Accounts...       Dickenson plc
     TypeText                          Email                    tvsh@gmail.com
-    TypeText                          Title                    project26
+    TypeText                          Title                    project27
     TypeText                          Mailing Street           hanuman nagar 4th line
     TypeText                          Mailing City             guntur
     TypeText                          Mailing State/Province   ap
