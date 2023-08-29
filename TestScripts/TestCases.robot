@@ -11,7 +11,12 @@ Contact Creation
     ClickText                         Contacts
     ClickUntil                        New Contact              New
     UseModal                          On
-    TypeText                          Phone                    +917398867459
+    # generate random phone number, just as an example
+    # NOTE: initialization of random number generator is done on suite setup
+    ${rand_phone}=                    Generate Random String   10                          [NUMBERS]
+    # concatenate leading "+" and random numbers
+    ${phone}=                         SetVariable              +${rand_phone}
+    TypeText                          Phone                    ${phone}                    First Name
     Picklist                          Salutation               Mr.
     TypeText                          First Name               tara26
     TypeText                          Last Name                chandika
