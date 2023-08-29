@@ -16,13 +16,13 @@ Contact Creation
     ${rand_phone}=                    Generate Random String   10                          [NUMBERS]
     # concatenate leading "+" and random numbers
     ${phone}=                         SetVariable              +${rand_phone}
-    TypeText                          Phone                    ${phone}                    First Name
+    TypeText                          Phone                    ${phone}                    
     Picklist                          Salutation               Mr.
-    TypeText                          First Name               tara27
+    TypeText                          First Name               tara28
     TypeText                          Last Name                chandika
     ComboBox                          Search Accounts...       Dickenson plc
     TypeText                          Email                    tvsh@gmail.com
-    TypeText                          Title                    project27
+    TypeText                          Title                    project28
     TypeText                          Mailing Street           hanuman nagar 4th line
     TypeText                          Mailing City             guntur
     TypeText                          Mailing State/Province   ap
