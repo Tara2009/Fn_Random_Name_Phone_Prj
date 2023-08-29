@@ -29,7 +29,7 @@ Contact Creation
     TypeText                          Other Zip/Postal Code    52206
     TypeText                          Other Country            india
     TypeText                          Fax                      7398878560
-    PickList                          Lead Source              Publicidad
+    PickList                          Lead Source              Web
     TypeText                          Home Phone               8987
     ClickText                         Birthdate                anchor=Home Phone
     DropDown                          Pick a Year              1979
