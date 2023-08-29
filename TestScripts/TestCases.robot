@@ -11,13 +11,28 @@ Contact Creation
     ClickText                         Contacts
     ClickUntil                        New Contact              New
     UseModal                          On
-    TypeText                          Phone                    +917398867459
+    # generate random phone number, just as an example
+    # NOTE: initialization of random number generator is done on suite setup
+    ${rand_phone}=                    Generate Random String   10                          [NUMBERS]
+    # concatenate leading "+" and random numbers
+    ${phone}=                         SetVariable              ${rand_phone}
+    TypeText                          Phone                    ${phone}                    
     Picklist                          Salutation               Mr.
-    TypeText                          First Name               tara26
-    TypeText                          Last Name                chandika
+    # Generate first name using random string
+    ${rand_first}=                    Generate Random String   3                           [NUMBERS]
+    ${FName}=                         SetVariable              tara${rand_first}
+    TypeText                          First Name               ${FName}
+    # Generate Last name using random string
+    ${rand_last}=                     Generate Random String   3                           [LETTERS]
+    ${LName}=                         SetVariable              chandika${rand_Last}
+    TypeText                          Last Name                ${LName}
     ComboBox                          Search Accounts...       Dickenson plc
-    TypeText                          Email                    tvsh@gmail.com
-    TypeText                          Title                    project26
+
+    ${rand_emaill}=                   Generate Random String   5                            [LETTERS]
+    ${rand_emailno}=                  Generate Random String   4                            [NUMBERS]
+    ${Email}=                         SetVariable              ${rand_emaill}${rand_emailno}@gmail.com
+    TypeText                          Email                    ${Email}
+    TypeText                          Title                    project28
     TypeText                          Mailing Street           hanuman nagar 4th line
     TypeText                          Mailing City             guntur
     TypeText                          Mailing State/Province   ap
@@ -28,19 +43,35 @@ Contact Creation
     TypeText                          Other State/Province     ap
     TypeText                          Other Zip/Postal Code    52206
     TypeText                          Other Country            india
-    TypeText                          Fax                      7398878560
+    # Generate fox using Generate Random String function
+    ${rand_fax}=                      Generate Random String   10                        [NUMBERS]
+    ${fax}=                           SetVariable              ${rand_fax}                         
+    TypeText                          Fax                      ${fax}
     PickList                          Lead Source              Web
-    TypeText                          Home Phone               8987
+    # Generate Home Phone using Generate Random String function
+    ${rand_home}=                     Generate Random String   10                        [NUMBERS]
+    ${Home phone}=                    SetVariable              ${rand_home}                               
+    TypeText                          Home Phone               ${Home phone}
     ClickText                         Birthdate                anchor=Home Phone
     DropDown                          Pick a Year              1979
     ClickText                         Previous                 Month
     ClickText                         Previous                 Month
     ClickText                         Previous                 Month
     ClickText                                                  20
-    TypeText                          Other Phone              987946
+    # Generate Other Phone using Generate Random String function
+    ${rand_OthPhone}=                 Generate Random String   10                        [NUMBERS]
+    ${OthPhone}=                      SetVariable              ${rand_OthPhone}                          }                            
+    TypeText                          Other Phone              ${OthPhone}
     TypeText                          Department               tesing department
     TypeText                          Assistant                no assistant
-    TypeText                          Asst. Phone              00000034
+    # Generate asst phone using Generate Random String function
+    ${rand_asstphone}=                Generate Random String   10                        [NUMBERS]
+    ${Asst Phone}=                    SetVariable              ${rand_asstphone}
+    TypeText                          Asst. Phone              ${Asst Phone}
+    # Generate mobile using Generate Random String function
+    ${rand_mobile}=                   Generate Random String   10                        [NUMBERS]
+    ${mobile}=                        SetVariable              ${rand_mobile}
+    TypeText                          Mobile                   ${mobile}                   
     TypeText                          Description              learning copado robotic testing
     ClickText                         Save                     partial_match=False
     UseModal                          Off
