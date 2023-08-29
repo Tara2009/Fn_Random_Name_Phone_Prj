@@ -19,4 +19,11 @@ Setup Browser
 End Suite
     Close All Browsers
 
+Login
+    [Documentation]                Login into Salesforce Instance
+    GoTo                           ${login_url}
+    TypeText                       Username                        ${username}            delay=1
+    TypeText                       Password                        ${password}
+    ClickText                      Log In
+
 
