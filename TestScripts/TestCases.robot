@@ -50,7 +50,7 @@ Contact Creation
     ClickText                                                  20
     # Generate Other Phone using Generate Random String function
     ${rand_OthPhone}=                 Generate Random String   10                        [NUMBERS]
-    ${OthPhone}=                      SetVariable              ${rand_OthPhone}                        }                            
+    ${OthPhone}=                      SetVariable              ${rand_OthPhone}                          }                            
     TypeText                          Other Phone              ${OthPhone}
     TypeText                          Department               tesing department
     TypeText                          Assistant                no assistant
