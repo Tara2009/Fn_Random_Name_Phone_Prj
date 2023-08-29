@@ -12,10 +12,10 @@ Contact Creation
     ClickUntil                        New Contact              New
     UseModal                          On
     TypeText                          Phone                    +917398867459
-    Picklist                          Salutation               Sr.
+    Picklist                          Salutation               Mr.
     TypeText                          First Name               tara srinivas20
     TypeText                          Last Name                chandika
-    ComboBox                          Search Accounts...       tara siri account7
+    ComboBox                          Search Accounts...       Dickenson plc
     TypeText                          Email                    tvsh@gmail.com
     TypeText                          Title                    project20
     TypeText                          Mailing Street           hanuman nagar 4th line
@@ -29,7 +29,7 @@ Contact Creation
     TypeText                          Other Zip/Postal Code    52206
     TypeText                          Other Country            india
     TypeText                          Fax                      7398878560
-    PickList                          Lead Source              Publicidad
+    PickList                          Lead Source              Web
     TypeText                          Home Phone               8987
     ClickText                         Birthdate                anchor=Home Phone
     DropDown                          Pick a Year              1979
