@@ -26,4 +26,10 @@ Login
     TypeText                       Password                        ${password}
     ClickText                      Log In
 
-
+Home
+    [Documentation]                Navigate to homepage, login if needed
+    GoTo                           ${home_url}
+    ${login_status}=               IsText                                    2
+    Run Keyword If                 ${login_status}                           Login
+    ClickText                      Home
+    VerifyTitle                    Home | Salesforce
