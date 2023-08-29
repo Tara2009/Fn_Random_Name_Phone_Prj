@@ -18,10 +18,20 @@ Contact Creation
     ${phone}=                         SetVariable              ${rand_phone}
     TypeText                          Phone                    ${phone}                    
     Picklist                          Salutation               Mr.
-    TypeText                          First Name               tara28
-    TypeText                          Last Name                chandika
+    # Generate first name using random string
+    ${rand_first}=                    Generate Random String   3                           [NUMBERS]
+    ${FName}=                         SetVariable              tara${rand_first}
+    TypeText                          First Name               ${FName}
+    # Generate Last name using random string
+    ${rand_last}=                     Generate Random String   3                           [LETTERS]
+    ${LName}=                         SetVariable              chandika${rand_Last}
+    TypeText                          Last Name                ${LName}
     ComboBox                          Search Accounts...       Dickenson plc
-    TypeText                          Email                    tvsh@gmail.com
+
+    ${rand_emaill}=                   Generate Random String   5                            [LETTERS]
+    ${rand_emailno}=                  Generate Random String   4                            [NUMBERS]
+    ${Email}=                         SetVariable              ${rand_emaill}${rand_emailno}@gmail.com
+    TypeText                          Email                    ${Email}
     TypeText                          Title                    project28
     TypeText                          Mailing Street           hanuman nagar 4th line
     TypeText                          Mailing City             guntur
