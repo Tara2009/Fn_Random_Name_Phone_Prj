@@ -13,7 +13,7 @@ Contact Creation
     UseModal                          On
     TypeText                          Phone                    +917398867459
     Picklist                          Salutation               Mr.
-    TypeText                          First Name               tara srinivas24
+    TypeText                          First Name               tara24
     TypeText                          Last Name                chandika
     ComboBox                          Search Accounts...       Dickenson plc
     TypeText                          Email                    tvsh@gmail.com
