@@ -40,6 +40,11 @@ Login As
     VerifyText            Freeze                      timeout=45                        # this is slow, needs longer timeout          
     ClickText             Login                       anchor=Freeze          delay=1      
 
+Fill MFA
+    ${mfa_code}=         GetOTP    ${username}   ${secret}   ${login_url}    
+    TypeSecret           Verification Code       ${mfa_code}      
+    ClickText            Verify 
+    
 Home
     [Documentation]                Navigate to homepage, login if needed
     GoTo                           ${home_url}
