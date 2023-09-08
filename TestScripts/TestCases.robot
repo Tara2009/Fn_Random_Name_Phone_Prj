@@ -3,6 +3,8 @@ Resource            ../Resources/common.robot
 Suite Setup         Setup Browser
 Suite Teardown      End Suite
 
+# Git push
+
 *** Test Cases ***
 Contact Creation
     [Tags]                            Contact
