@@ -32,6 +32,8 @@ Contact Creation
     ${rand_last}=         Generate Random String      3                           [LETTERS]
     ${LName}=             SetVariable                 chandika${rand_Last}
     TypeText              Last Name                   ${LName}
+    ${fullname}           Catenate                    ${FName}                    ${LName}
+    Log                   ${fullname}
     ComboBox              Search Accounts...          Dickenson plc
 
     ${rand_emaill}=       Generate Random String      5                           [LETTERS]
